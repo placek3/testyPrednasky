@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Aké sú typické vlastnosti výstupnej vrstvy a stratovej funkcie pre úlohu binárnej klasifikácie?",
+    "options": ["1 výstupný neurón, žiadna aktivačná funkcia, stratová funkcia MSE", "1 výstupný neurón, aktivačná funkcia Sigmoid, stratová funkcia Binary Cross-Entropy", "N výstupných neurónov (podľa počtu tried), aktivačná funkcia Softmax, stratová funkcia Cross-Entropy", "1 výstupný neurón, aktivačná funkcia Softmax, stratová funkcia Binary Cross-Entropy"],
+    "correct": 1
+  },
+  {
+    "question": "Prečo pri klasifikácii do viacerych tried (multi-class) nestačí použiť jediný výstupný neurón s ordinálnym kódovaním (napr. 0 = Pes, 1 = Mačka, 2 = Vták)?",
+    "options": ["Lebo jediný neurón dokáže vypočítať iba reálne čísla a nie celé čísla.", "Lebo to implikuje geometrické usporiadanie a vzdialenosti medzi kategorickými triedami (sieť by predpokladala, že mačka je priemer psa a vtáka).", "Lebo Softmax sa dá použiť výhradne s 1 výstupným neurónom.", "Lebo pri jedinom výstupe nie je možné vypočítať deriváciu stratovej funkcie."],
+    "correct": 1
+  },
+  {
+    "question": "Čo zabezpečuje použitie One-hot kódovania v spojení s vreckom ortogonálnych vektorov v priestore pri reprezentácii tried?",
+    "options": ["Zaručuje, že suma všetkých predikovaných čísel bude rovná 0.", "Ortogonalita zaistí, že každá trieda má vlastný nezávislý výstup a rovnaké vzdialenosti zaručujú symetriu medzi triedami.", "Znižuje počet výstupných neurónov v modeli na polovicu.", "Umožňuje sieti použiť MSE namiesto Cross-Entropy."],
+    "correct": 1
+  },
+  {
+    "question": "Aké sú dve základné vlastnosti aktivačnej funkcie Softmax použitej na výstupnej vrstve pre multi-class klasifikáciu?",
+    "options": ["Prevádza logity na záporné čísla a ich súčet je 0.", "Zachováva poradie logitov a transformuje ich na nezáporné čísla, ktorých súčet je rovný 1.0.", "Mení najvyššiu hodnotu vždy na 1 a ostatné na 0.", "Funguje rovnako ako lineárna aktivácia bez akýchkoľvek obmedzení rozsahu."],
+    "correct": 1
+  },
+  {
+    "question": "Prečo sa pri implementácii neurónových sietí (napr. v PyTorchi cez nn.CrossEntropyLoss) odporúča vracať z modelu priamo logity namiesto manuálneho aplikovania Softmaxu na výstupe?",
+    "options": ["Aplikovanie Softmaxu v modeli spôsobuje pád programu pri spätnom prechode.", "Spojený výpočet Softmaxu/Sigmoidu s logaritmom v loss funkcii je numericky stabilnejší a zabraňuje chybám pri tréningu.", "Pretože PyTorch nepodporuje funkciu Softmax.", "Aby sa zrýchlil výpočet na CPU o viac ako 90 %."],
+    "correct": 1
+  },
+  {
+    "question": "Čo vyjadruje metrika Accuracy a kedy nás môže výrazne oklamal?",
+    "options": ["Vyjadruje podiel správne klasifikovaných vzoriek; klame pri výrazne nevyvážených triedach (imbalanced dataset).", "Vyjadruje podiel False Positives; klame pri vyváženom datasete.", "Vyjadruje len presnosť pozitívnej triedy; klame pri príliš veľkom počte epoch.", "Vyjadruje harmonický priemer a klame vtedy, keď sú váhy modelu nulové."],
+    "correct": 0
+  },
+  {
+    "question": "Čo vyjadruje metrika Precision na rozdiel od metriky Recall?",
+    "options": ["Precision vyjadruje, koľko zo skutočne pozitívnych príkladov sme zachytili; Recall vyjadruje presnosť z predikovaných pozitívnych.", "Precision vyjadruje, koľko z príkladov označených modelom ako pozitívne naozaj pozitívnych bolo; Recall vyjadruje, koľko zo skutočných pozitívnych sme zachytili.", "Precision aj Recall vyjadrujú to isté, len v iných percentuálnych škálach.", "Precision meria False Negatives a Recall meria False Positives."],
+    "correct": 1
+  },
+  {
+    "question": "Prečo je F1-score definované ako harmonický priemer Precision a Recall a nie ako ich obycajný aritmetický priemer?",
+    "options": ["Lebo aritmetický priemer je náročnejší na výpočet.", "Lebo harmonický priemer silno penalizuje extrémne nízke hodnoty jednej z metrík (odhalí napr. P=0.99 a R=0.01).", "Lebo F1-score sa používa výhradne pri regresii.", "Lebo harmonický priemer dáva vždy vyššiu hodnotu ako aritmetický."],
+    "correct": 1
+  },
+  {
+    "question": "Na čo slúži validačná sada (Validation set) na rozdiel od testovacej sady (Test set)?",
+    "options": ["Validačná sada slúži na trénovanie váh w a biasov b; testovacia sada slúži na ladenie hyperparametrov.", "Validačná sada slúži na ladenie hyperparametrov a sledovanie overfittingu počas tréningu; testovacia sada sa otvára iba raz na záverečné vyhodnotenie.", "Validačná aj testovacia sada sa spájajú dohromady pri každom forward passe.", "Testovacia sada upravuje learning rate a validačná sada hodnotí kvalitu dát."],
+    "correct": 1
+  },
+  {
+    "question": "Čo je hlavnou výhodou techniky Stratified k-fold Cross-Validation pri rozdeľovaní datasetu oproti štandardnému náhodnému k-fold splitu?",
+    "options": ["Stratified k-fold je výrazne rýchlejší pri trénovaní veľkých sietí.", "Umožňuje trénovať model bez použitia spätného šírenia (Backpropagation).", "Zabezpečuje, že každý fold si zachová rovnaké percentuálne rozloženie tried ako má celý pôvodný dataset.", "Umožňuje nahradiť testovaciu sadu bez nutnosti jej zapečatenia."],
+    "correct": 2
+  }
+]

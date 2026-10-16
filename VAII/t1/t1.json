@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Na akom základnom architektonickom princípe funguje World Wide Web (WWW) podľa priložených prednáškových materiálov?",
+    "options": ["Peer-to-peer (P2P)", "Klient / Server", "Monolitická architektúra", "Event-driven architektúra"],
+    "correct": 1
+  },
+  {
+    "question": "Ktorá z nasledujúcich vlastností je charakteristická výhradne pre webové aplikácie v porovnaní s desktopovými?",
+    "options": ["Môžu fungovať plne offline bez nutnosti siete", "Aplikáciu je potrebné pred prvým spustením nainštalovať do OS", "Spúšťajú sa v internetovom prehliadači a sú väčšinou multiplatformové", "Majú priamy a neobmedzený prístup k hardvéru a perifériám"],
+    "correct": 2
+  },
+  {
+    "question": "Ktorý protokol alebo technológia sa používa na obojstrannú komunikáciu medzi klientom a serverom v reálnom čase?",
+    "options": ["WebSocket", "REST API", "Fetch API", "HTTP/HTTPS"],
+    "correct": 0
+  },
+  {
+    "question": "Aké je hlavné odporúčanie ohľadom písania názvov značiek a zápisu hodnôt atribútov v modernom štandarde HTML5?",
+    "options": ["Používať veľké písmená pre značky a nepoužívať úvodzovky", "Používať malé písmená pre značky a hodnoty atribútov písať v úvodzovkách", "Používať CamelCase pre značky aj atribúty", "Sú povinné výhradne apostrofy namiesto úvodzoviek"],
+    "correct": 1
+  },
+  {
+    "question": "Čo sa stane v prehliadači, ak sa v kóde HTML5 vyskytne neznáma značka alebo syntaktická chyba?",
+    "options": ["Prehliadač zobrazí chybové hlásenie (Fatal Error) a zastaví vykresľovanie", "Stránka sa automaticky presmeruje na validátor W3C", "Neznáme značky sa vynechajú a prehliadač sa snaží dokument zobraziť za každú cenu", "Prehliadač odmietne načítať celý sprievodný CSS súbor"],
+    "correct": 2
+  },
+  {
+    "question": "Ktorá z nasledujúcich deklarácií typu dokumentu (DOCTYPE) je správna pre štandard HTML5?",
+    "options": ["<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">", "<!DOCTYPE html>", "<!DOCTYPE HTML5 SYSTEM>", "<code doctype=\"html5\">"],
+    "correct": 1
+  },
+  {
+    "question": "Ktoré značky sa ako jediné môžu nachádzať priamo v koreňovom elemente <html>?",
+    "options": ["<header> a <footer>", "<head> a <body>", "<title> a <meta>", "<div> a <span>"],
+    "correct": 1
+  },
+  {
+    "question": "Ktoré značky slúžia na zápis krátkej inline citácie a dlhej blokovej citácie v HTML5?",
+    "options": ["Inline: <cite>, Bloková: <quote>", "Inline: <q>, Bloková: <blockquote>", "Inline: <mark>, Bloková: <section>", "Inline: <em>, Bloková: <strong>"],
+    "correct": 1
+  },
+  {
+    "question": "Ak je aktuálna URL stránky http://www.mojastranka.sk/obsah/index.html, kam bude smerovať relatívna cesta \"../obrazok/obr.jpg\"?",
+    "options": ["http://www.mojastranka.sk/obsah/obrazok/obr.jpg", "http://www.mojastranka.sk/obrazok/obr.jpg", "http://www.mojastranka.sk/obsah/index.html/obrazok/obr.jpg", "http://www.mojastranka.sk/obr.jpg"],
+    "correct": 1
+  },
+  {
+    "question": "Ktorá z nasledujúcich dvojíc značiek sa používa na vytvorenie nečíslovaného a číslovaného zoznamu?",
+    "options": ["Nečíslovaný: <ol>, Číslovaný: <ul>", "Nečíslovaný: <ul>, Číslovaný: <ol>", "Nečíslovaný: <list>, Číslovaný: <enum>", "Nečíslovaný: <li>, Číslovaný: <dt>"],
+    "correct": 1
+  },
+  {
+    "question": "Na čo slúžia atribúty colspan a rowspan pri tvorbe HTML tabuliek?",
+    "options": ["Na nastavenie farby pozadia stĺpcov a riadkov", "Na spájanie stĺpcov (colspan) a riadkov (rowspan)", "Na definovanie výšky a šírky celej tabuľky v pixeloch", "Na zarovnanie textu v bunkách vľavo a vpravo"],
+    "correct": 1
+  },
+  {
+    "question": "Ktoré HTML entity predstavujú špeciálne znaky '<', '>', '&' a nedeliteľnú medzeru?",
+    "options": ["&less;, &more;, &and;, &space;", "&lt;, &gt;, &amp;, &nbsp;", "&L;, &G;, &A;, &S;", "&#60;, &#62;, &#38;, &#160; (výhradne hexa zápis)"],
+    "correct": 1
+  },
+  {
+    "question": "Aký význam majú ARIA atribúty (napr. role, aria-label, aria-hidden) v HTML5?",
+    "options": ["Umožňujú automatickú prekladateľnosť stránky do iných jazykov", "Slúžia na zrýchlenie načítania obrázkov a videí", "Umožňujú správne pochopenie obsahu a interakcií pre čítačky obrazovky (prístupnosť)", "Definujú grafické štýly pre mobilné zariadenia"],
+    "correct": 2
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Ktoré z nasledujúcich tvrdení správne popisuje rozdiel medzi parametrom a hyperparametrom v neurónových sieťach?",
+    "options": ["Parametre sa nastavujú pred tréningom používateľom, zatiaľ čo hyperparametre sa sieť učí z dát.", "Parametre (napr. váhy w, biasy b) sa učí sieť z dát, zatiaľ čo hyperparametre (napr. learning rate η) nastavuje vývojár mimo tréningu.", "Medzi parametrom a hyperparametrom nie je žiadny rozdiel, oba pojmy označujú váhy w.", "Hyperparametre sa aktualizujú automaticky v každej epoche pomocou gradientného zostupu."],
+    "correct": 1
+  },
+  {
+    "question": "Prečo sa pri stratovej funkcii MSE (Mean Squared Error) namiesto prostého priemeru chýb (y - ŷ) používajú druhé mocniny chýb (y - ŷ)²?",
+    "options": ["Aby boli výpočty rýchlejšie pre GPU.", "Aby sa kladné a záporné chyby vzájomne nerušili a väčšie chyby boli viac penalizované.", "Aby bola hodnota straty vždy záporná.", "Pretože prostý priemer chýb nie je možné matematicky derivovať."],
+    "correct": 1
+  },
+  {
+    "question": "Aky bude výsledok aktualizácie váhy w po jednom kroku gradientného zostupu, ak je aktuálna váha w = 0, vstup x = 2, cieľ y = 4, predikcia ŷ = 0 (pri b = 0), stratová funkcia L = (y - ŷ)², derivácia ∂L/∂w = -2(y - ŷ)x a learning rate η = 0.05?",
+    "options": ["w = 0.4", "w = 0.8", "w = 1.6", "w = -0.8"],
+    "correct": 1
+  },
+  {
+    "question": "Čo sa stane s tréningom neurónovej siete, ak zvolíme príliš veľký learning rate η (napr. η = 0.25 v príklade z prednášky)?",
+    "options": ["Konvergencia bude veľmi pomalá, ale stabilná.", "Sieť preskočí minimum, strata začne rásť a tréning môže divergovat.", "Gradient sa automaticky zmenší na nulu.", "Počet epoch sa výrazne zníži bez vplyvu na stratu."],
+    "correct": 1
+  },
+  {
+    "question": "Aký je vzťah a rozdiel medzi pojemami Backpropagation a Gradient Descent?",
+    "options": ["Backpropagation aj Gradient Descent sú identické algoritmy pre aktualizáciu váh.", "Backpropagation mení architektúru siete, zatiaľ čo Gradient Descent počíta derivácie.", "Backpropagation iba vypočíta gradienty (∂L/∂w) pomocou reťazového pravidla; optimalizátor (napr. Gradient Descent) následne rozhodne, ako váhy upraví.", "Gradient Descent vypočíta gradienty a Backpropagation ich aplikuje na vstupne dáta."],
+    "correct": 2
+  },
+  {
+    "question": "Čo vyjadruje pravidlo reťazca (Chain Rule) použité pri algoritme Backpropagation pre vzťah ∂L/∂w = ∂L/∂a · ∂a/∂z · ∂z/∂w?",
+    "options": ["Súčet jednotlivých derivácií pre výpočet celkového zrýchlenia tréningu.", "Súčin lokálnych derivácií, ktorý vyjadruje, ako zmena váhy w ovplyvní celkovú stratu L.", "Rozdiel medzi dopredným a spätným prechodom.", "Priemer štvorcových odchýlok v jednotlivých vrstvách siete."],
+    "correct": 1
+  },
+  {
+    "question": "Aký je hlavný dôvod prečo sa v praxi namiesto celého datasetu (Batch GD) alebo 1 príkladu (Pure SGD) používa tréning po tzv. mini-batchoch (napr. veľkosť 32)?",
+    "options": ["Mini-batch zaručuje nájdenie globálneho minima v každom tréningu.", "Predstavuje kompromis medzi stabilnejším odhadom gradientu a rýchlosťou výpočtu s využitím paralelizmu na GPU.", "Mini-batch úplne odstraňuje potrebu používať aktivačné funkcie.", "Pri mini-batchi nie je potrebné uchovávať hodnoty z a a z forward passu."],
+    "correct": 1
+  },
+  {
+    "question": "Aký problém pri trénovaní hlbokých sietí spôsobuje použitie Sigmoid aktivačnej funkcie v skrytých vrstvách (tzv. Vanishing Gradient)?",
+    "options": ["Derivácia sigmoidu je max 0.25, čo spôsobuje, že pri násobení cez viacero vrstiev gradient klesá k nule a prvé vrstvy sa takmer neučia.", "Derivácia sigmoidu nadobúda nekonečne veľké hodnoty, čo vedie k explózii gradientu.", "Sigmoid mení všetky záporné váhy na kladné.", "Sigmoid vyžaduje 10-krát viac pamäte než akákoľvek iná funkcia."],
+    "correct": 0
+  },
+  {
+    "question": "Ktorá vlastnosť aktivačnej funkcie ReLU (max(0, z)) pomáha riešiť problém miznúceho gradientu (Vanishing Gradient) pre aktívne neuróny (z > 0)?",
+    "options": ["Jej derivácia pre z > 0 je rovná 1, takže pri spätnom šírení neskracuje/netlmí gradient.", "Jej derivácia je vždy menšia ako 0.25.", "Pripája automaticky prídavné biasy k prvým vrstvám.", "Zabezpečuje, že záporné neuróny majú vždy hodnotu 1."],
+    "correct": 0
+  },
+  {
+    "question": "Čo označuje pojem 'Dying ReLU' pri použití ReLU aktivačnej funkcie?",
+    "options": ["Stav, kedy sa váhy siete zmenšia na 0 z dôvodu vysokej hodnoty learning rate.", "Stav, kedy pre neuróny so z < 0 je gradient rovný 0, a ak sa neurón dostane do tejto oblasti, prestane sa učiť.", "Problém, pri ktorom sa výstup siete zmení na nekonečno (NaN).", "Situáciu, keď stratová funkcia klesne na absolútne zero."],
+    "correct": 1
+  }
+]
